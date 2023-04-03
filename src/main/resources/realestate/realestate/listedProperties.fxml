@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" stylesheets="@../style.css"
+            xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="realestate.realestate.SellerDash">
+    <children>
+        <VBox layoutX="-1.0" layoutY="-4.0" prefHeight="609.0" prefWidth="295.0" style="-fx-background-color: #ffff66;">
+            <children>
+                <Group/>
+                <Label fx:id="nameLabel" alignment="CENTER" prefHeight="115.0" prefWidth="295.0" text="Usename"/>
+                <VBox/>
+                <Button fx:id="postButton" ellipsisString="" onAction="#post" prefHeight="94.0" prefWidth="295.0"
+                        style="-fx-background-color: #0066cc;" text="Post Property" textAlignment="CENTER"
+                        wrapText="true">
+                    <VBox.margin>
+                        <Insets top="23.0"/>
+                    </VBox.margin>
+                </Button>
+                <Button fx:id="listedButton" mnemonicParsing="false" onAction="#listed" prefHeight="91.0"
+                        prefWidth="295.0" style="-fx-background-color: #cccc00;" text="Your Listed Properties"
+                        textAlignment="CENTER" wrapText="true">
+                    <VBox.margin>
+                        <Insets top="23.0"/>
+                    </VBox.margin>
+                </Button>
+                <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#logout" prefHeight="91.0"
+                        prefWidth="295.0" text="Logout" textAlignment="CENTER" wrapText="true">
+                    <VBox.margin>
+                        <Insets top="23.0"/>
+                    </VBox.margin>
+                </Button>
+            </children>
+        </VBox>
+        <VBox layoutX="294.0" layoutY="-4.0" prefHeight="94.0" prefWidth="733.0" style="-fx-background-color: #996699;">
+            <children>
+                <Label alignment="CENTER" blendMode="GREEN" nodeOrientation="LEFT_TO_RIGHT" prefHeight="68.0"
+                       prefWidth="734.0" text="Seller's Dashboard" textFill="#16f9f5">
+                    <font>
+                        <Font name="System Bold" size="32.0"/>
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+        <Label alignment="CENTER" layoutX="333.0" layoutY="103.0" prefHeight="35.0" prefWidth="193.0"
+               text="Property Details:"/>
+        <Label alignment="CENTER" layoutX="341.0" layoutY="200.0" prefHeight="35.0" prefWidth="193.0"
+               text="Total Number of Properties"/>
+        <Label alignment="CENTER" layoutX="571.0" layoutY="200.0" prefHeight="35.0" prefWidth="193.0" text="Sold"/>
+        <Label fx:id="totalListedLabel" alignment="CENTER" layoutX="341.0" layoutY="265.0" prefHeight="35.0"
+               prefWidth="193.0"/>
+        <Label fx:id="soldLabel" alignment="CENTER" layoutX="571.0" layoutY="265.0" prefHeight="35.0"
+               prefWidth="193.0"/>
+    </children>
+</AnchorPane>

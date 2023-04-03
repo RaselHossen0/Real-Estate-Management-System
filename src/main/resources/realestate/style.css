@@ -1,0 +1,23 @@
+.root{
+-fx-background-color:#ffffcc;
+-fx-height: 600;
+-fx-width: 1000;
+}
+.label{
+-fx-background-color:#ff6666;
+-fx-allignment:" Center";
+}
+.button{
+    -fx-background-color:#0099cc;
+    -fx-font-family: "Verdana";
+    -fx-font-size: 15;
+    -fx-font-weight: bold;
+    -fx-color:#000000;
+
+
+
+
+}
+.anchorpane{
+-fx-preHeight:"600";
+}

@@ -27,3 +27,4 @@
 16/7878/Chittagong/Khulshi/Flat/Rent/1.5/Balcony,Garden/Robert Lee/4165557890/rlee@email.com
 17/8989/Dhaka/Mirpur/Land/Sale/2.2/Parking,View,Security/Rachel Brown/442079876543/rbrown@email.com
 18/1010/Sylhet/Sunamganj/Flat/Rent/3.5/Balcony,Mountain View/Tommy Green/6125552345/tgreen@email.com
+45/1453/Barishal/Natullabad/Flat/Rent/3.8/Nice view /Kalu Mia/32425235235/fgagf

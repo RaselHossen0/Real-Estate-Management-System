@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="realEstate.DashBoard">
+    <children>
+        <VBox layoutX="-1.0" layoutY="-4.0" prefHeight="609.0" prefWidth="178.0" style="-fx-background-color: #ffff66;">
+            <children>
+                <Group />
+                <VBox />
+                <Button ellipsisString="" onAction="#toRent" prefHeight="32.0" prefWidth="179.0" snapToPixel="false" text="Avaiability" textAlignment="CENTER" textFill="#050404" wrapText="true">
+                    <VBox.margin>
+                        <Insets top="120.0" />
+                    </VBox.margin>
+                    <font>
+                        <Font name="System Bold" size="10.0" />
+                    </font>
+                </Button>
+                <Button fx:id="saleSearchButton1" mnemonicParsing="false" onAction="#byArea" prefHeight="33.0" prefWidth="179.0" text="By Area" textAlignment="CENTER" textFill="#0b0a0a" wrapText="true">
+                    <VBox.margin>
+                        <Insets top="23.0" />
+                    </VBox.margin>
+                </Button>
+                <Button fx:id="rentSearchButton1" ellipsisString="" onAction="#byType" prefHeight="25.0" prefWidth="179.0" snapToPixel="false" text="By Type" textAlignment="CENTER" textFill="#050404" wrapText="true">
+                    <font>
+                        <Font name="System Bold" size="10.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets top="23.0" />
+                    </VBox.margin>
+                </Button>
+                <Button fx:id="saleSearchButton11" mnemonicParsing="false" onAction="#addProperty" prefHeight="37.0" prefWidth="179.0" text="Add Property" textAlignment="CENTER" textFill="#0b0a0a" wrapText="true">
+                    <VBox.margin>
+                        <Insets top="23.0" />
+                    </VBox.margin>
+                </Button>
+                <Button fx:id="saleSearchButton111" mnemonicParsing="false" onAction="#removeProperty" prefHeight="32.0" prefWidth="179.0" text="Remove Property" textAlignment="CENTER" textFill="#0b0a0a" wrapText="true">
+                    <VBox.margin>
+                        <Insets top="23.0" />
+                    </VBox.margin>
+                </Button>
+            <Button fx:id="saleSearchButton112" mnemonicParsing="false" onAction="#editProperty" prefHeight="37.0" prefWidth="179.0" text="Edit Property" textAlignment="CENTER" textFill="#0b0a0a" wrapText="true">
+               <VBox.margin>
+                  <Insets top="23.0" />
+               </VBox.margin>
+            </Button>
+                <Button fx:id="rentSearchButton11" ellipsisString="" onAction="#loanCalc" prefHeight="25.0" prefWidth="179.0" snapToPixel="false" text="Loan Calculator" textAlignment="CENTER" textFill="#050404" wrapText="true">
+                    <font>
+                        <Font name="System Bold" size="10.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets top="23.0" />
+                    </VBox.margin>
+                </Button>
+                <Button fx:id="saleSearchButton" mnemonicParsing="false" onAction="#toSale" prefHeight="33.0" prefWidth="179.0" text="Add Customer" textAlignment="CENTER" textFill="#0b0a0a" wrapText="true">
+                    <VBox.margin>
+                        <Insets top="23.0" />
+                    </VBox.margin>
+                </Button>
+            </children>
+        </VBox>
+      <Label layoutX="249.0" layoutY="136.0" prefHeight="37.0" prefWidth="140.0" text="Total Sell" />
+      <Label fx:id="total" layoutX="249.0" layoutY="199.0" prefHeight="37.0" prefWidth="140.0" />
+      <Label layoutX="452.0" layoutY="136.0" prefHeight="37.0" prefWidth="140.0" text="Total Buyers" />
+      <Label layoutX="452.0" layoutY="199.0" prefHeight="37.0" prefWidth="140.0" />
+      <Label layoutX="657.0" layoutY="136.0" prefHeight="37.0" prefWidth="170.0" text="Total Listed Properties" />
+      <Label fx:id="listeddPropLabel" alignment="CENTER" layoutX="657.0" layoutY="199.0" prefHeight="37.0" prefWidth="170.0" />
+      <Label layoutX="249.0" layoutY="282.0" prefHeight="37.0" prefWidth="140.0" text="Total Sellers" />
+      <Label layoutX="249.0" layoutY="340.0" prefHeight="37.0" prefWidth="140.0" />
+      <VBox layoutX="-3.0" layoutY="-4.0" prefHeight="94.0" prefWidth="1044.0" style="-fx-background-color: #996699;">
+         <children>
+            <Label alignment="CENTER" blendMode="GREEN" nodeOrientation="LEFT_TO_RIGHT" prefHeight="68.0" prefWidth="864.0" text="Dashboard" textFill="#16f9f5">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="23.0" left="90.0" right="23.0" top="23.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+    </children>
+</AnchorPane>

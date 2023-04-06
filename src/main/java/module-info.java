@@ -3,6 +3,8 @@ module realestate.realestate {
     requires javafx.fxml;
 
 
-    opens realestate.realestate to javafx.fxml;
-    exports realestate.realestate;
+    opens realEstate to javafx.fxml;
+    exports realEstate;
+    exports realEstate.classes;
+    opens realEstate.classes to javafx.fxml;
 }

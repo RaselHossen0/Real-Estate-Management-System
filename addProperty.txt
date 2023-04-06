@@ -13,18 +13,17 @@
 02/2222/Chittagong/Banani/Flat/Rent/3.0/Parking,View/Sarah Lee/8801912345678/slee@email.com
 03/3333/Dhaka/Dhanmondi/Flat/Sale/4.0/Garden,Pool/Tom Brown/8801812345678/tbrown@email.com
 04/4444/Dhaka/Shahbag/Land/Rent/2.5/School,Market/Jane Doe/8801712345679/jdoe@email.com
-05/5555/Dhaka/Bashundhara/Flat/Sale/1.5/Balcony,Security/Luke Anderson/8801612345678/landerson@email.com
+34/5555/Dhaka/Shahbag/Flat/Sale/1.5/Balcony,Security/Domingo/8801612345678/landerson@email.com
 06/6666/Chittagong/GEC/Flat/Rent/2.0/Balcony,Gym,Party Room/Alexandra Lee/4165557890/alee@email.com
-07/7777/Dhaka/Mirpur/Flat/Sale/3.5/Garden,Fireplace,Pool/James Brown/442079876543/jbrown@email.com
 08/8888/Sylhet/Amberkhana/Flat/Rent/1.0/Balcony,Mountain View/Lauren Green/6125552345/lgreen@email.com
-09/9999/Dhaka/Uttara/Flat/Sale/2.8/Parking,View/Marie Dupont/33112345678/mdupont@email.com
+11/9999/Barishal/Natullahbad/Flat/Sale/2.8/Parking,View/Rasel Hossen/Marie Dupont/33112345678
 10/1212/Barishal/Fatikchhari/Flat/Rent/4.2/Garden,Pool,Sauna/Takeshi Nakamura/8135556789/tnakamura@email.com
 11/2323/Dhaka/Panthapath/Flat/Sale/3.3/Balcony,Parking/Emma Smith/8801712345678/esmith@email.com
 12/3434/Chittagong/Chawkbazar/Flat/Rent/2.7/Balcony,Sea View/William Brown/8801912345678/wbrown@email.com
 13/4545/Dhaka/Mohammadpur/Flat/Sale/4.5/Garden,Pool,Jacuzzi/Alice Lee/8801812345678/alee@email.com
 14/5656/Barishal/Muladi/Flat/Rent/2.2/School,Park/David Johnson/8801712345679/djohnson@email.com
-15/6767/Dhaka/Gulshan/Flat/Sale/3.0/Balcony,Gym,Pool/Nicole Miller/8801612345678/nmiller@email.com
 16/7878/Chittagong/Khulshi/Flat/Rent/1.5/Balcony,Garden/Robert Lee/4165557890/rlee@email.com
 17/8989/Dhaka/Mirpur/Land/Sale/2.2/Parking,View,Security/Rachel Brown/442079876543/rbrown@email.com
 18/1010/Sylhet/Sunamganj/Flat/Rent/3.5/Balcony,Mountain View/Tommy Green/6125552345/tgreen@email.com
 45/1453/Barishal/Natullabad/Flat/Rent/3.8/Nice view /Kalu Mia/32425235235/fgagf
+56/8678/Barishal/Uttara/Land/Rent/3.4/otel/Jamal Mallick/42342/falkdf

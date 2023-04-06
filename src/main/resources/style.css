@@ -1,0 +1,88 @@
+.root{
+    -fx-background-color:linear-gradient(from 0.0% 0.0% to 100.0% 0.0%, #7ee8ecff 0.0%, #4a4ae3ff 100.0%);
+    -fx-height: 600;
+    -fx-width: 1000;
+}
+
+.label-centered {
+    -fx-alignment: center;
+}
+
+.vbox {
+    -fx-spacing: 10;
+    -fx-alignment: center;
+    -fx-padding: 10;
+    -fx-border-width: 3;
+    -fx-border-color: black;
+     -fx-background-color: #336699;
+}
+
+.anchor-pane {
+    -fx-pref-width: 1200;
+    -fx-pref-height: 900;
+    -fx-background-color: #f4f4f4;
+    -fx-padding: 10px;
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+}
+
+.table-view {
+    -fx-background-color: #f2f2f2;
+    -fx-border-width: 1;
+    -fx-border-color: #cccccc;
+    -fx-font-weight: bold;
+}
+
+.table-cell {
+    -fx-text-fill: #333333;
+    -fx-padding: 5px;
+    -fx-alignment: center-left;
+}
+
+.table-row-cell {
+    -fx-cell-size: 40px;
+}
+
+.text-field {
+    -fx-background-color: #f2f2f2;
+    -fx-text-fill: #333333;
+    -fx-font-weight: bold;
+    -fx-prompt-text-fill: #999999;
+    -fx-border-color: #999999;
+    -fx-border-radius: 5px;
+}
+
+.table-column .text-cell {
+    -fx-alignment: center-left;
+    -fx-text-fill: #333333;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 5px;
+    -fx-background-color: #f2f2f2;
+    -fx-background-insets: 0px;
+    -fx-border-insets: 0px;
+}
+
+.label{
+  -fx-font-family: Noto Sans CJK JP;
+    -fx-background-color:#ff9966;
+    -fx-alignment:"CENTER";
+
+    -fx-font-weight: bold;
+    -fx-text-alignment: center;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 10, 0, 0, 5);
+}
+
+.button{
+    -fx-background-color:#339933;
+    -fx-font-family: Noto Sans CJK JP;
+    -fx-font-size: 15;
+    -fx-font-weight: bold;
+    -fx-border-style: solid;
+    -fx-border-radius: 20;
+    -fx-background-insets: 3;
+    -fx-padding: 14;
+    -fx-text-alignment: center;
+    -fx-background-radius: 20;
+}
+

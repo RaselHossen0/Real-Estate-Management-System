@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1200.0" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="realEstate.InAreaResult">
+    <children>
+      <VBox layoutY="1.0" prefHeight="700.0" prefWidth="210.0" style="-fx-background-color: #ffff66;">
+         <children>
+            <Group />
+            <VBox />
+            <Button ellipsisString="" onAction="#toAvailability" prefHeight="32.0" prefWidth="179.0" snapToPixel="false" text="Availability" textAlignment="CENTER" textFill="#050404" wrapText="true">
+               <VBox.margin>
+                  <Insets left="16.0" top="110.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#byArea" prefHeight="33.0" prefWidth="179.0" style="-fx-background-color: #ff0033;" text="By Area" textAlignment="CENTER" textFill="#0b0a0a" wrapText="true">
+               <VBox.margin>
+                  <Insets left="16.0" top="23.0" />
+               </VBox.margin>
+            </Button>
+            <Button ellipsisString="" onAction="#byType" prefHeight="25.0" prefWidth="179.0" snapToPixel="false" text="By Type" textAlignment="CENTER" textFill="#050404" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="16.0" top="23.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#addProperty" prefHeight="37.0" prefWidth="179.0" text="Add Property" textAlignment="CENTER" textFill="#0b0a0a" wrapText="true">
+               <VBox.margin>
+                  <Insets left="16.0" top="23.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#removeProperty" prefHeight="32.0" prefWidth="179.0" text="Remove Property" textAlignment="CENTER" textFill="#0b0a0a" wrapText="true">
+               <VBox.margin>
+                  <Insets left="16.0" top="23.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#editProperty" prefHeight="37.0" prefWidth="179.0" text="Edit Property" textAlignment="CENTER" textFill="#0b0a0a" wrapText="true">
+               <VBox.margin>
+                  <Insets left="16.0" top="23.0" />
+               </VBox.margin>
+            </Button>
+            <Button ellipsisString="" onAction="#loanCalc" prefHeight="25.0" prefWidth="179.0" snapToPixel="false" text="Loan Calculator" textAlignment="CENTER" textFill="#050404" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="16.0" top="23.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#addCustomer" prefHeight="33.0" prefWidth="179.0" text="Add Customer" textAlignment="CENTER" textFill="#0b0a0a" wrapText="true">
+               <VBox.margin>
+                  <Insets left="16.0" top="23.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <VBox layoutY="-1.0" prefHeight="94.0" prefWidth="1200.0" style="-fx-background-color: #996699;">
+         <children>
+            <Label alignment="CENTER" blendMode="GREEN" nodeOrientation="LEFT_TO_RIGHT" prefHeight="68.0" prefWidth="864.0" text="Dashboard" textFill="#16f9f5">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="23.0" left="90.0" right="23.0" top="23.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+      <TableView fx:id="table" layoutX="261.0" layoutY="121.0" prefHeight="455.0" prefWidth="722.0">
+        <columns>
+          <TableColumn fx:id="serialCol" prefWidth="99.06561279296875" text="Property ID" />
+          <TableColumn fx:id="sellerNameCol" prefWidth="126.0" text="Seller Name" />
+            <TableColumn fx:id="districtCol" prefWidth="87.0" text="District" />
+            <TableColumn fx:id="locationCol" prefWidth="119.0" text="Location" />
+            <TableColumn fx:id="priceCol" prefWidth="132.0" text="Price" />
+            <TableColumn fx:id="typeCol" prefWidth="156.0" text="Type" />
+        </columns>
+      </TableView>
+      <Button layoutX="912.0" layoutY="590.0" mnemonicParsing="false" onAction="#dashBoard" text="Back" />
+    </children>
+</AnchorPane>

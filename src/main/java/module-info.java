@@ -1,8 +1,11 @@
 module realestate.realestate {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.sql;
 
 
-    opens realestate.realestate to javafx.fxml;
-    exports realestate.realestate;
+    opens realEstate to javafx.fxml;
+    exports realEstate;
+    exports realEstate.classes;
+    opens realEstate.classes to javafx.fxml;
 }

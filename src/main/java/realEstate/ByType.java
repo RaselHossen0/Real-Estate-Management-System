@@ -38,13 +38,6 @@ public class ByType implements Initializable {
     void backtoDash(ActionEvent event) {
 
     }
-
-
-
-
-
-
-
     @FXML
     void search(ActionEvent event) throws IOException {
         boxValue();

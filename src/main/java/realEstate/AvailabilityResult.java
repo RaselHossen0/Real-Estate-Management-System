@@ -70,8 +70,6 @@ public class AvailabilityResult implements Initializable {
         stage.show();
     }
 
-
-
     @FXML
     void backtoDash(ActionEvent event) throws IOException {
         FXMLLoader loader=new FXMLLoader(getClass().getResource("DashBoard.fxml"));

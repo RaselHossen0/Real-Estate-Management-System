@@ -173,6 +173,11 @@ public class AvailabilityResult implements Initializable {
 
     }
 
-    public void toRent(ActionEvent event) {
+    public void toRent(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("inArea.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 }

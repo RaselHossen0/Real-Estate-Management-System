@@ -8,7 +8,7 @@
 
 <AnchorPane prefHeight="700.0" prefWidth="1200.0" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="realEstate.DashBoard">
     <children>
-        <VBox layoutX="-1.0" layoutY="-4.0" prefHeight="706.0" prefWidth="210.0" style="-fx-background-color: #ffff66;">
+        <VBox layoutX="-1.0" layoutY="-4.0" prefHeight="706.0" prefWidth="210.0" style="-fx-background-color: #cc3333;">
             <children>
                 <Group />
                 <VBox />

@@ -74,7 +74,7 @@
 }
 
 .button{
-    -fx-background-color:#339933;
+    -fx-background-color:#003366;
     -fx-font-family: Noto Sans CJK JP;
     -fx-font-size: 15;
     -fx-font-weight: bold;
@@ -84,5 +84,6 @@
     -fx-padding: 14;
     -fx-text-alignment: center;
     -fx-background-radius: 20;
+    -fx-text-fill: #cccccc;
 }
 

@@ -9,7 +9,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import realEstate.classes.Property;
 import realEstate.classes.PropertyManager;
@@ -31,6 +30,8 @@ public class EditProperty {
 
     @FXML
     private Label loattionLabel;
+    @FXML
+    private Label  errorMessage;
 
     @FXML
     private TextField locationField;
@@ -130,23 +131,17 @@ public class EditProperty {
         try{
 
             if(toBEedited.getPropertyID()==null){
-                idLabel.setText("Please enter correct id!!");
-                idLabel.setTextFill(Color.WHITE);
-                idLabel.setPrefWidth(153);
                 return null;
             }
             else{
-                idLabel.setText("Enter Property ID");
-                idLabel.setTextFill(Color.BLACK);
                 sellerNameLabel.setText(toBEedited.getSellerName());
                 typeLabel.setText(toBEedited.getType());
                 districtLabel.setText(toBEedited.getDistrict());
                 loattionLabel.setText(toBEedited.getLocation());
                 priceLabel.setText(String.valueOf(toBEedited.getPrice()));
-
             }
         }catch (Exception e){
-           // System.out.println(e);
+           System.out.println(e);
         }
         return toBEedited;
     }
@@ -160,7 +155,12 @@ public class EditProperty {
     }
     @FXML
     void search(ActionEvent event) {
-         serachbyID();
+        if(serachbyID()==null)
+            errorMessage.setText("No property with this ID!");
+        else {
+            serachbyID();
+            errorMessage.setText("");
+        }
     }
 
     @FXML

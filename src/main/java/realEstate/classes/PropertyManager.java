@@ -1,7 +1,5 @@
 package realEstate.classes;
 
-import realEstate.PropertyStatus;
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -41,15 +39,7 @@ public class PropertyManager {
         PropertyManager.totalProperties = totalProperties;
     }
 
-    public List<Property> getPropertiesByStatus(PropertyStatus status) {
-        List<Property> propertiesByStatus = new ArrayList<>();
-        for (Property property : properties) {
-            if (property.getStatus().equals(status)) {
-                propertiesByStatus.add(property);
-            }
-        }
-        return propertiesByStatus;
-    }
+
     static public Property getbyID(Integer id){
         Property ans=new Property();
         for (Property property : properties) {

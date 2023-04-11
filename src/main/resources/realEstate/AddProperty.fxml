@@ -86,7 +86,7 @@
       </VBox>
       <VBox layoutX="-6.0" prefHeight="94.0" prefWidth="1206.0" style="-fx-background-color: #996699;">
          <children>
-            <Label alignment="CENTER" blendMode="GREEN" nodeOrientation="LEFT_TO_RIGHT" prefHeight="68.0" prefWidth="864.0" text="Dashboard" textFill="#16f9f5">
+            <Label alignment="CENTER" blendMode="GREEN" nodeOrientation="LEFT_TO_RIGHT" prefHeight="68.0" prefWidth="864.0" style="-fx-background-color: #996699;" text="Dashboard" textFill="#16f9f5">
                <font>
                   <Font name="System Bold" size="32.0" />
                </font>

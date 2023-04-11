@@ -27,30 +27,6 @@ Scene scene;
     private Label monthlyLabel;
 
     @FXML
-    private Button rentSearchButton;
-
-    @FXML
-    private Button rentSearchButton1;
-
-    @FXML
-    private Button rentSearchButton11;
-
-    @FXML
-    private Button saleSearchButton;
-
-    @FXML
-    private Button saleSearchButton1;
-
-    @FXML
-    private Button saleSearchButton11;
-
-    @FXML
-    private Button saleSearchButton111;
-
-    @FXML
-    private Button saleSearchButton112;
-
-    @FXML
     private TextField searchFiled;
 
     @FXML
@@ -68,7 +44,7 @@ Scene scene;
     void byArea(ActionEvent event) {
 
     }
-void calculation(){
+void monthlyLoan(){
         Integer propID= Integer.valueOf(searchFiled.getText());
     double propertyPrice = PropertyManager.getPriceOf(propID)* 100000;
     double downPayment = Double.parseDouble(downField.getText())* 100000;
@@ -99,7 +75,7 @@ void calculation(){
 
     @FXML
     void loanCalc(ActionEvent event) {
-calculation();
+monthlyLoan();
     }
     @FXML
     void removeProperty(ActionEvent event) throws IOException {

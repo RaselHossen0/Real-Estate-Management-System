@@ -8,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import realEstate.classes.Property;
 import realEstate.classes.PropertyManager;
@@ -20,6 +21,7 @@ public class RemoveProp {
     public Label locationLabel;
     public Label districtLabel;
     public Label sellerNameLabel;
+    public Label errorMessage;
     public TextField searchFiled;
     Stage stage;
     Scene scene;
@@ -126,7 +128,7 @@ public class RemoveProp {
 
 
     @FXML
-    void toRent(ActionEvent event) throws IOException {
+    void toAvailability(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("Availabilty.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -144,7 +146,17 @@ public class RemoveProp {
     }
 
     public void search(ActionEvent event) {
-        searchID();
+        if(searchID()==null) {
+            errorMessage.setVisible(true);
+            errorMessage.setText("Please Enter Correct ID!");
+            errorMessage.setTextFill(Color.RED);
+            errorMessage.setStyle("-fx-background-color: white;");
+
+        }
+        else {
+            errorMessage.setVisible(false);
+            searchID();
+        }
     }
 
     public void remove(ActionEvent event) {

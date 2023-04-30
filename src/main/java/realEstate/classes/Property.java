@@ -7,17 +7,16 @@ import java.io.IOException;
 public class Property {
     String district;
     String location;
-    String country;
     String type;
     String availability;
     Integer propertyID;
-    String landArea;
     String  size;
     String description;
     String  sellerName;
     String  contact;
     String imagePath;
     Integer price;
+    Customer customer;
 
     public Integer getPrice() {
         return price;
@@ -30,17 +29,14 @@ public class Property {
     public Property(String district, String location, String country, String type, String availability, Integer propertyID, String landArea, String status) {
         this.district = district;
         this.location = location;
-        this.country = country;
         this.type = type;
         this.availability = availability;
         this.propertyID = propertyID;
-        this.landArea = landArea;
-        this.status = status;
+
+
     }
     public Property(){}
 
-
-    String status;
 
     public String getAvailability() {
         return availability;
@@ -102,13 +98,7 @@ public class Property {
         this.location = location;
     }
 
-    public String getCountry() {
-        return country;
-    }
 
-    public void setCountry(String country) {
-        this.country = country;
-    }
 
     public void setType(String type) {
         this.type = type;
@@ -126,26 +116,17 @@ public class Property {
         this.propertyID = propertyID;
     }
 
-    public String getLandArea() {
-        return landArea;
-    }
 
-    public void setLandArea(String landArea) {
-        this.landArea = landArea;
-    }
 
-    public void setStatus(String status) {
-        this.status = status;
-    }
+
+
     public  void writingFile() throws IOException {
         BufferedWriter writer = new BufferedWriter(new FileWriter("addProperty.txt", true));
-        writer.write(country + "/" + district + "/" + location + "/" + landArea + "/" + type + "/" + availability + "\n");
+        writer.write( district + "/" + location + "/" + type + "/" + availability + "\n");
         writer.close();
     }
 
-    public String getStatus() {
-        return status;
-    }
+
 
     public String getType() {
         return type;

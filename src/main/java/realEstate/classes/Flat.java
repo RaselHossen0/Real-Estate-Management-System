@@ -1,7 +1,5 @@
 package realEstate.classes;
 
-import realEstate.Image;
-
 public class Flat extends Property implements Image {
     Integer room;
     Integer bath;

@@ -39,8 +39,7 @@ public class PropertyManager {
         PropertyManager.totalProperties = totalProperties;
     }
 
-
-    static public Property getbyID(Integer id){
+    static public Property getByID(Integer id){
         Property ans=new Property();
         for (Property property : properties) {
             if (Objects.equals(property.getPropertyID(), id)) {
@@ -50,15 +49,6 @@ public class PropertyManager {
         return ans;
     }
 
-   static public List<Property> getPropertiesByType(String type) {
-        List<Property> propertiesByType = new ArrayList<>();
-        for (Property property : properties) {
-            if (property.getType().equals(type)) {
-                propertiesByType.add(property);
-            }
-        }
-        return propertiesByType;
-    }
     static public Integer getPriceOf(Integer id) {
         Integer price=0;
         for (Property property : properties) {
@@ -103,23 +93,6 @@ public class PropertyManager {
             System.out.println("Error: " + e.getMessage());
         }
     }
-    static public List<Property> getPropertiesType() {
-        /*
-        String district = splitString[0];
-            String cost =splitString[1] ;
-            String location =splitString[2];
-         */
-
-        List<Property> propertiesByType = new ArrayList<>();
-//        if(Type.equals("Flat")) {
-//            for (Property property : properties) {
-//                if (property.getDistrict().equals(district) || property.getDistrict().equals(cost)) {
-//                    propertiesByType.add(property);
-//                }
-//            }
-//        }
-        return propertiesByType;
-    }
     public static List<Property> getType(String Type) {
         List<Property> ansList=new ArrayList<>();
         if(Type.equals("Land")) {
@@ -156,7 +129,7 @@ public class PropertyManager {
         }
         return ansList;
     }
-    public static void retrive() throws IOException {
+    public static void retrieve() throws IOException {
         BufferedReader reader=new BufferedReader(new FileReader("addProperty.txt"));
         String whole;
         int cnt=0;

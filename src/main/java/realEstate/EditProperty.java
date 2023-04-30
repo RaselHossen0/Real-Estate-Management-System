@@ -127,7 +127,7 @@ public class EditProperty {
    public Property serachbyID(){
         Integer id= Integer.valueOf(searchField.getText());
         Property toBEedited;
-        toBEedited=PropertyManager.getbyID(id);
+        toBEedited=PropertyManager.getByID(id);
         try{
 
             if(toBEedited.getPropertyID()==null){

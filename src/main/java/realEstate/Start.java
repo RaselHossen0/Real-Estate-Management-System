@@ -7,6 +7,7 @@ import javafx.stage.Stage;
 import realEstate.classes.PropertyManager;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class Start extends Application {
     @Override
@@ -22,8 +23,8 @@ public class Start extends Application {
             System.out.println(e);
         }
     }
-    public static void main(String[] args) throws IOException {
-        PropertyManager.retrive();
+    public static void main(String[] args) throws IOException, SQLException {
+        PropertyManager.retrieve();
         launch();
     }
 }

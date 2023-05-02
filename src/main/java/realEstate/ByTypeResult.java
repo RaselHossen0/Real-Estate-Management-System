@@ -104,6 +104,7 @@ public class ByTypeResult implements Initializable {
         try {
             BufferedReader reader = new BufferedReader(new FileReader("byType.txt"));
             String whole = reader.readLine();
+            PropertyManager.retrieve();
             List<Property> list1;
             list1 = PropertyManager.getType(whole);
             list.addAll(list1);

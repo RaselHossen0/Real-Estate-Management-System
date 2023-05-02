@@ -48,15 +48,6 @@ public class AvailabilityResult implements Initializable {
     ObservableList<Property> list = FXCollections.observableArrayList();
 
 
-    @FXML
-    void toAvailability(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("Availabilty.fxml"));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-
-    }
     Stage stage;
     Scene scene;
 
@@ -75,6 +66,7 @@ public class AvailabilityResult implements Initializable {
         FXMLLoader loader=new FXMLLoader(getClass().getResource("DashBoard.fxml"));
         Parent root = loader.load();
         DashBoard ds=loader.getController();
+        PropertyManager.retrieve();
         Integer totProp= PropertyManager.getTotalProperties();
         ds.listeddPropLabel.setText(String.valueOf(totProp));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -147,6 +139,7 @@ public class AvailabilityResult implements Initializable {
             BufferedReader reader = new BufferedReader(new FileReader("Availability.txt"));
             String whole = reader.readLine();
             List<Property> list1;
+            PropertyManager.retrieve();
             list1 = PropertyManager.getAvailAbility(whole);
             list.addAll(list1);
             reader.close();

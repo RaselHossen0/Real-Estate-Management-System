@@ -9,6 +9,7 @@ import realEstate.classes.PropertyManager;
 import java.io.IOException;
 
 public class Start extends Application {
+
     @Override
     public void start(Stage stage) throws IOException {
         try {
@@ -22,6 +23,7 @@ public class Start extends Application {
             System.out.println(e);
         }
     }
+
     public static void main(String[] args) throws IOException {
         PropertyManager.retrive();
         launch();

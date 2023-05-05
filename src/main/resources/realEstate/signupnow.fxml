@@ -78,7 +78,7 @@
             <TextField fx:id="Email" layoutX="209.0" layoutY="391.0" promptText="Email" />
             <PasswordField fx:id="Password" layoutX="209.0" layoutY="455.0" promptText="Password" />
             <PasswordField fx:id="ConfirmPassword" layoutX="209.0" layoutY="529.0" promptText="Confirm Password" />
-            <Label fx:id="msg1" layoutX="55.0" layoutY="593.0" prefHeight="17.0" prefWidth="310.0" />
+            <Label fx:id="msg1" layoutX="55.0" layoutY="593.0" prefHeight="17.0" prefWidth="310.0" textFill="#4b9435" />
             <Button fx:id="CreateAccount" layoutX="56.0" layoutY="627.0" mnemonicParsing="false" onAction="#CreateAccountOnAction" prefHeight="32.0" prefWidth="167.0" text="Done" />
             <Label fx:id="msg2" layoutX="55.0" layoutY="585.0" prefHeight="17.0" prefWidth="310.0" textFill="#eb0707" />
             <ImageView fitHeight="730.0" fitWidth="553.0" layoutX="383.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">

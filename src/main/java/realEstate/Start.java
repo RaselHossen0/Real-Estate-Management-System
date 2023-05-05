@@ -25,7 +25,7 @@ public class Start extends Application {
     }
 
     public static void main(String[] args) throws IOException {
-        PropertyManager.retrive();
+        PropertyManager.retrieve();
         launch();
     }
 }

@@ -1,4 +1,4 @@
-package realEstate;
+package realEstate.classes;
 
 public interface Image {
     void addImage();

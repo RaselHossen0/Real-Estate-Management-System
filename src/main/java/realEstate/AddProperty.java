@@ -173,7 +173,7 @@ public class AddProperty {
         //newProperty.price = ((priceField.getText()));
         //newProperty.country = countryFiled.getText();
         newProperty.setLocation(locationField.getText());
-        newProperty.setLandArea(sizeFild.getText());
+        newProperty.setSize(sizeFild.getText());
 
         if (flatTick.isSelected() && !landTick.isSelected())
             newProperty.setType("Flat");

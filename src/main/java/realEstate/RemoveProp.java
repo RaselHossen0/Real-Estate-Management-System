@@ -28,7 +28,7 @@ public class RemoveProp {
     public Property searchID(){
         Integer id= Integer.valueOf(searchFiled.getText());
         Property toBEedited;
-        toBEedited= PropertyManager.getbyID(id);
+        toBEedited= PropertyManager.getByID(id);
         try{
             if(toBEedited.getPropertyID()==null){
 //                idLabel.setText("Please enter correct id!!");

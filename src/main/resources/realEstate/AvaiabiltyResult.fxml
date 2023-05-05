@@ -69,23 +69,23 @@
       </VBox>
       <VBox layoutY="-4.0" prefHeight="94.0" prefWidth="1200.0" style="-fx-background-color: #996699;">
          <children>
-            <Label alignment="CENTER" blendMode="GREEN" nodeOrientation="LEFT_TO_RIGHT" prefHeight="68.0" prefWidth="874.0" style="-fx-background-color: #996699;" text="                      Dashboard" textFill="#16f9f5">
+            <Label alignment="CENTER" blendMode="GREEN" nodeOrientation="LEFT_TO_RIGHT" prefHeight="68.0" prefWidth="1224.0" style="-fx-background-color: #996699;" text="                      Dashboard" textFill="#16f9f5">
                <font>
                   <Font name="System Bold" size="32.0" />
                </font>
             </Label>
          </children>
       </VBox>
-      <Label alignment="CENTER" layoutX="286.0" layoutY="120.0" prefHeight="38.0" prefWidth="400.0" style="-fx-background-color: #99cccc;" text="Properties: Available for Rent or Sale" />
+      <Label alignment="CENTER" layoutX="335.0" layoutY="121.0" prefHeight="38.0" prefWidth="488.0" style="-fx-background-color: #99cccc;" text="Properties: Available for Rent or Sale" />
       <Button layoutX="886.0" layoutY="616.0" mnemonicParsing="false" onAction="#backtoDash" prefHeight="33.0" prefWidth="114.0" text="Back" />
-      <TableView fx:id="table" layoutX="286.0" layoutY="184.0" prefHeight="409.0" prefWidth="714.0">
+      <TableView fx:id="table" layoutX="334.0" layoutY="180.0" prefHeight="409.0" prefWidth="803.0">
         <columns>
-          <TableColumn fx:id="idCol" prefWidth="112.14984130859375" text="Property ID" />
-          <TableColumn fx:id="nameCol" prefWidth="111.2152099609375" text="Seller Name" />
-            <TableColumn fx:id="districtCol" prefWidth="75.0" text="District " />
-            <TableColumn fx:id="locationCol" prefWidth="94.3927001953125" text="Location" />
-            <TableColumn fx:id="availabilityCol" prefWidth="126.1685791015625" text="Availabilty" />
-            <TableColumn fx:id="priceCol" prefWidth="191.5892913591672" text="Price" />
+          <TableColumn fx:id="idCol" prefWidth="130.8414306640625" text="Property ID" />
+          <TableColumn fx:id="nameCol" prefWidth="105.60781860351562" text="Seller Name" />
+            <TableColumn fx:id="districtCol" prefWidth="119.62646484375" text="District " />
+            <TableColumn fx:id="locationCol" prefWidth="112.1497802734375" text="Location" />
+            <TableColumn fx:id="availabilityCol" prefWidth="160.7481689453125" text="Availabilty" />
+            <TableColumn fx:id="priceCol" prefWidth="175.70123291015625" text="Price" />
         </columns>
       </TableView>
    </children>

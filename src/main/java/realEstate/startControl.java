@@ -10,6 +10,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.*;
@@ -17,6 +18,8 @@ import java.io.*;
 public class startControl {
     @FXML
     private Button cancelBut;
+    @FXML
+    private Button forgetPassBut;
 
     @FXML
     private TextField username;
@@ -25,6 +28,26 @@ public class startControl {
     private PasswordField password;
     @FXML
     private Label loginMsg;
+
+
+
+    @FXML
+    private void forgetPassOnAction(ActionEvent event) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("forgetPass.fxml"));
+            Parent root = fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setTitle("SECURITY");
+            stage.initModality(Modality.APPLICATION_MODAL); // Set modality to make it a pop-up window
+            stage.initOwner(forgetPassBut.getScene().getWindow()); // Set the owner window
+            stage.setX(forgetPassBut.getScene().getWindow().getX()+300);
+            stage.setY(forgetPassBut.getScene().getWindow().getY()+26);
+            stage.setScene(new Scene(root));
+            stage.showAndWait(); // Show the pop-up window and wait until it's closed
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
     public void loginButOnAction(ActionEvent event){
         // loginMsg.setText("Please enter username and password");
 
@@ -138,9 +161,7 @@ public class startControl {
         try{
             FXMLLoader loader=new FXMLLoader(getClass().getResource("signupnow.fxml"));
             Parent root = loader.load();
-           // DashBoard ds=loader.getController();
-            //Integer totProp= PropertyManager.getTotalProperties();
-            //ds.listeddPropLabel.setText(String.valueOf(totProp));
+
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             stage.setScene(scene);

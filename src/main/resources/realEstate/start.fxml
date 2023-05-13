@@ -33,9 +33,9 @@
                 <PasswordField fx:id="password" layoutX="118.0" layoutY="352.0" prefHeight="26.0" prefWidth="233.0" promptText="Password" />
                 <Label fx:id="loginMsg" alignment="TOP_CENTER" layoutX="54.0" layoutY="403.0" prefHeight="17.0" prefWidth="295.0" textFill="#e82a2a" />
                 <Button fx:id="logBut" layoutX="55.0" layoutY="443.0" mnemonicParsing="false" onAction="#loginButOnAction" prefHeight="26.0" prefWidth="300.0" text="Login" />
-                <Button fx:id="cancelBut" layoutX="57.0" layoutY="568.0" mnemonicParsing="false" onAction="#cancelButOnAction" prefHeight="26.0" prefWidth="300.0" text="Cancel" />
-                <Label fx:id="loginMsg1" alignment="TOP_CENTER" layoutX="58.0" layoutY="486.0" prefHeight="17.0" prefWidth="295.0" text="Don't have an account?" textFill="#1f2022" />
-            <Button layoutX="178.0" layoutY="503.0" mnemonicParsing="false" onAction="#signup" style="-fx-background-color: #0000;" text="Signup" textFill="#165ac7" />
+                <Button fx:id="cancelBut" layoutX="56.0" layoutY="668.0" mnemonicParsing="false" onAction="#cancelButOnAction" prefHeight="26.0" prefWidth="300.0" text="Cancel" />
+                <Label fx:id="loginMsg1" alignment="TOP_CENTER" layoutX="59.0" layoutY="549.0" prefHeight="17.0" prefWidth="295.0" text="Don't have an account?" textFill="#1f2022" />
+            <Button layoutX="178.0" layoutY="566.0" mnemonicParsing="false" onAction="#signup" style="-fx-background-color: #0000;" text="Signup" textFill="#165ac7" />
             <ImageView fitHeight="341.0" fitWidth="361.0" layoutX="136.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@9.png" />
@@ -51,6 +51,7 @@
                   <Image url="@8.png" />
                </image>
             </ImageView>
+            <Button fx:id="forgetPassBut" layoutX="150.0" layoutY="496.0" mnemonicParsing="false" onAction="#forgetPassOnAction" style="-fx-background-color: #0000;" text="Forget Password?" textFill="#165ac7" />
             </children>
         </AnchorPane>
     </center>

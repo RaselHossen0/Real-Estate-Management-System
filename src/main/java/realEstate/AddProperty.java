@@ -119,10 +119,10 @@ public class AddProperty extends Scene_Change {
 
             try {
                 if (splitString[6].equals("Yes")) {
-                   // type = 1;
+                    // type = 1;
                     //two[1] = type;
                 } else if (splitString[7].equals("Yes")) {
-                   // type = 2;
+                    // type = 2;
                     //two[1] = type;
                 }
             } catch (Exception e) {
@@ -152,9 +152,9 @@ public class AddProperty extends Scene_Change {
         String type=null;
         String selRent = null;
         if (saleTick.isSelected() && !rentTick.isSelected())
-           selRent = "Sale";
+            selRent = "Sale";
         else if (!saleTick.isSelected() && rentTick.isSelected())
-           selRent = "Rent";
+            selRent = "Rent";
         if (flatTick.isSelected() && !landTick.isSelected())
             type = "Flat";
         else if (!flatTick.isSelected() && landTick.isSelected())
@@ -166,7 +166,7 @@ public class AddProperty extends Scene_Change {
         String contact=contactFild.getText();
         String imagePath=path;
         writer.write(price+"/"+propertyID+"/"+district+"/"+location+"/"+type+"/"+selRent+"/"+size+"/"
-        +description+"/"+sellerName+"/"+contact+"/"+imagePath+"\n");
+                +description+"/"+sellerName+"/"+contact+"/"+imagePath+"\n");
         writer.close();
     }
     int savingPost() throws IOException {
@@ -199,10 +199,10 @@ public class AddProperty extends Scene_Change {
 //        if (newProperty.price == null || newProperty.country == null || newProperty.type == null ||
 //                newProperty.availability == null || newProperty.location == null || newProperty.landArea == null
 //        )
-            flag = 0;
-      //  if (flag == 1) {
-            newProperty.writingFile();
-       // }
+        flag = 0;
+        //  if (flag == 1) {
+        newProperty.writingFile();
+        // }
         //properties.addProperty(newProperty);
         return flag;
     }

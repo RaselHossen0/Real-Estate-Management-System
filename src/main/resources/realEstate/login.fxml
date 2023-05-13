@@ -14,5 +14,6 @@
       </ImageView>
       <Button fx:id="dashboard" layoutX="362.0" layoutY="417.0" mnemonicParsing="false" onAction="#dashboardOnAction" prefHeight="73.0" prefWidth="448.0" style="-fx-background-color: #0000;" />
       <Button fx:id="profile" layoutX="362.0" layoutY="271.0" mnemonicParsing="false" onAction="#profileOnAction" prefHeight="73.0" prefWidth="448.0" style="-fx-background-color: #0000;" />
+      <AnchorPane layoutX="-429.0" layoutY="-9.0" prefHeight="714.0" prefWidth="407.0" />
    </children>
 </AnchorPane>

@@ -1,21 +1,15 @@
 package realEstate;
 
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import realEstate.classes.Property;
-import realEstate.classes.PropertyManager;
+import realEstate.Main_Classes.Property;
+import realEstate.Main_Classes.PropertyManager;
 
-import java.io.IOException;
-
-public class RemoveProp {
+public class RemoveProp extends  Scene_Change{
 
     public Label typeLabel;
     public Label locationLabel;
@@ -50,113 +44,25 @@ public class RemoveProp {
         }
         return toBEedited;
     }
-
-    @FXML
-    void addProperty(ActionEvent event) {
-        Parent root = null;
-        try {
-            root = FXMLLoader.load(getClass().getResource("AddProperty.fxml"));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
-
-    @FXML
-    void byArea(ActionEvent event) {
-        Parent root = null;
-        try {
-            root = FXMLLoader.load(getClass().getResource("inArea.fxml"));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
-
-    @FXML
-    void byType(ActionEvent event) {
-        Parent root = null;
-        try {
-            root = FXMLLoader.load(getClass().getResource("byType.fxml"));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
-
-    @FXML
-    void editProperty(ActionEvent event) {
-        Parent root = null;
-        try {
-            root = FXMLLoader.load(getClass().getResource("editProperty.fxml"));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
-
-    @FXML
-    void loanCalc(ActionEvent event) {
-        Parent root = null;
-        try {
-            root = FXMLLoader.load(getClass().getResource("loanCalc.fxml"));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
-
-    @FXML
-    void removeProperty(ActionEvent event) {
-
-    }
-
-
-    @FXML
-    void toAvailability(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("Availabilty.fxml"));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
-
-    @FXML
-    void toSale(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("AddCustomer.fxml"));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
-
     public void search(ActionEvent event) {
         if(searchID()==null) {
             errorMessage.setVisible(true);
             errorMessage.setText("Please Enter Correct ID!");
             errorMessage.setTextFill(Color.RED);
             errorMessage.setStyle("-fx-background-color: white;");
-
+            clear();
         }
         else {
             errorMessage.setVisible(false);
             searchID();
         }
+    }
+    public void clear(){
+        sellerNameLabel.setText("");
+        typeLabel.setText("");
+        districtLabel.setText("");
+        locationLabel.setText("");
+
     }
 
     public void remove(ActionEvent event) {

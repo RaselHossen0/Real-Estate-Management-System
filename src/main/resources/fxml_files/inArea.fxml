@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane prefHeight="700.0" prefWidth="1200.0" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="realEstate.Search_Options.InArea">
+   <children>
+      <VBox layoutY="14.0" prefHeight="687.0" prefWidth="210.0" style="-fx-background-color: #ffff66;">
+         <children>
+            <Group />
+            <VBox />
+            <Button ellipsisString="" onAction="#toAvailability" prefHeight="32.0" prefWidth="179.0" snapToPixel="false" text="Availability" textAlignment="CENTER" textFill="#050404" wrapText="true">
+               <VBox.margin>
+                  <Insets left="16.0" top="110.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+            </Button>
+            <Button fx:id="saleSearchButton1" mnemonicParsing="false" onAction="#byArea" prefHeight="33.0" prefWidth="179.0" style="-fx-background-color: #ff0033;" text="By Area" textAlignment="CENTER" textFill="#0b0a0a" wrapText="true">
+               <VBox.margin>
+                  <Insets left="16.0" top="23.0" />
+               </VBox.margin>
+            </Button>
+            <Button ellipsisString="" onAction="#byType" prefHeight="25.0" prefWidth="179.0" snapToPixel="false" text="By Type" textAlignment="CENTER" textFill="#050404" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="16.0" top="23.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#addProperty" prefHeight="37.0" prefWidth="179.0" text="Add Property" textAlignment="CENTER" textFill="#0b0a0a" wrapText="true">
+               <VBox.margin>
+                  <Insets left="16.0" top="23.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#removeProperty" prefHeight="32.0" prefWidth="179.0" text="Remove Property" textAlignment="CENTER" textFill="#0b0a0a" wrapText="true">
+               <VBox.margin>
+                  <Insets left="16.0" top="23.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#editProperty" prefHeight="37.0" prefWidth="179.0" text="Edit Property" textAlignment="CENTER" textFill="#0b0a0a" wrapText="true">
+               <VBox.margin>
+                  <Insets left="16.0" top="23.0" />
+               </VBox.margin>
+            </Button>
+            <Button ellipsisString="" onAction="#loanCalc" prefHeight="25.0" prefWidth="179.0" snapToPixel="false" text="Loan Calculator" textAlignment="CENTER" textFill="#050404" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="16.0" top="23.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#addCustomer" prefHeight="33.0" prefWidth="179.0" text="Add Customer" textAlignment="CENTER" textFill="#341f1f" wrapText="true">
+               <VBox.margin>
+                  <Insets left="16.0" top="23.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <VBox layoutY="-4.0" prefHeight="94.0" prefWidth="1200.0" style="-fx-background-color: #996699;">
+         <children>
+            <Label alignment="CENTER" blendMode="GREEN" nodeOrientation="LEFT_TO_RIGHT" prefHeight="68.0" prefWidth="874.0" style="-fx-background-color: #996699;" text="                      Dashboard" textFill="#16f9f5">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Label alignment="CENTER" layoutX="418.0" layoutY="247.0" prefHeight="38.0" prefWidth="152.0" text="District" />
+      <Label alignment="CENTER" layoutX="418.0" layoutY="339.0" prefHeight="38.0" prefWidth="152.0" text="Location" />
+      <ChoiceBox fx:id="districtBox" layoutX="625.0" layoutY="247.0" prefHeight="38.0" prefWidth="193.0" />
+      <ChoiceBox fx:id="locationBox" layoutX="625.0" layoutY="340.0" prefHeight="38.0" prefWidth="193.0" />
+      <Button layoutX="551.0" layoutY="435.0" mnemonicParsing="false" onAction="#search" prefHeight="34.0" prefWidth="125.0" text="Search" textAlignment="CENTER" wrapText="true" />
+      <Label alignment="CENTER" layoutX="419.0" layoutY="159.0" prefHeight="38.0" prefWidth="400.0" style="-fx-background-color: #99cccc;" text="Properties in Specific Location">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <Button layoutX="841.0" layoutY="535.0" mnemonicParsing="false" onAction="#backtoDash" prefHeight="50.0" prefWidth="125.0" text="Back" />
+      <ImageView fitHeight="55.0" fitWidth="56.0" layoutX="950.0" layoutY="596.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/home.png" />
+         </image>
+      </ImageView>
+      <Button onAction="#toDash" layoutX="1016.0" layoutY="599.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="151.0" style="-fx-background-color: #ff0033;" text="Dashboard" />
+   </children>
+</AnchorPane>

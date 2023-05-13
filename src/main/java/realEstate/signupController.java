@@ -31,6 +31,8 @@ public class signupController {
     @FXML
     private TextField Email;
     @FXML
+    private TextField securityQ;
+    @FXML
     private PasswordField Password;
     @FXML
     private PasswordField ConfirmPassword;
@@ -43,27 +45,7 @@ public class signupController {
     private boolean accountCreated = false;
     Stage stage;
     Scene scene;
-    /*
-    public void initialize() {
-        try {
-            // Read data from file
-            BufferedReader reader = new BufferedReader(new FileReader("profileInfo.txt"));
-            String line = reader.readLine();
-            String[] data = line.split(",");
 
-            // Set label text
-            Username.setText(data[0]);
-            Mail.setText(data[2]);
-            Number.setText(data[1]);
-
-
-            reader.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-     */
     public void CreateAccountOnAction(ActionEvent event){
         // loginMsg.setText("Please enter username and password");
         if (accountCreated) {
@@ -82,7 +64,7 @@ public class signupController {
             }
         }
 
-        else if(Firstname.getText().isBlank()==false&&Lastname.getText().isBlank()==false&&ContactNumber.getText().isBlank()==false&&Email.getText().isBlank()==false&&Password.getText().isBlank()==false&&ConfirmPassword.getText().isBlank()==false) {
+        else if(Firstname.getText().isBlank()==false&&Lastname.getText().isBlank()==false&&ContactNumber.getText().isBlank()==false&&Email.getText().isBlank()==false&&securityQ.getText().isBlank()==false&&Password.getText().isBlank()==false&&ConfirmPassword.getText().isBlank()==false) {
             validateSignup();
 
 
@@ -118,7 +100,7 @@ public class signupController {
 
                     // Write the data from the text fields and password fields to the file
                     bufferedWriter.write(Firstname.getText() + "," + Lastname.getText() + "," +
-                            ContactNumber.getText() + "," + Email.getText() + "," + Password.getText());
+                            ContactNumber.getText() + "," + Email.getText() + ","+ securityQ.getText() + "," + Password.getText());
                     bufferedWriter.newLine();
 
                 } catch (IOException e) {
@@ -161,26 +143,18 @@ public class signupController {
                     // Handle any exceptions that might occur while writing to the file
                     e.printStackTrace();
                 }
-                /*
-                try {
-            // Read data from file
-            BufferedReader reader = new BufferedReader(new FileReader("profileInfo.txt"));
-            String line = reader.readLine();
-            String[] data = line.split(",");
+                try (FileWriter fileWriter = new FileWriter("forgetpass.txt", false);
+                     BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)) {
 
-            // Set label text
-            Username.setText(data[0]);
-            Mail.setText(data[2]);
-            Number.setText(data[1]);
+                    // Write the data from the text fields and password fields to the file
+                    bufferedWriter.write( Email.getText()+","+securityQ.getText());
+                    bufferedWriter.newLine();
 
+                } catch (IOException e) {
+                    // Handle any exceptions that might occur while writing to the file
+                    e.printStackTrace();
+                }
 
-            reader.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-                    System.out.println("hi");
-        }
-
-                 */
 
 
 

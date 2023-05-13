@@ -114,5 +114,19 @@ public class ByTypeResult implements Initializable {
         }
     }
 
-
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        try {
+            search();
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+        locationCol.setCellValueFactory(new PropertyValueFactory<Property, String>("location"));
+        sellerNameCol.setCellValueFactory(new PropertyValueFactory<Property, String>("sellerName"));
+        serialCol.setCellValueFactory(new PropertyValueFactory<Property, Integer>("propertyID"));
+        priceCol.setCellValueFactory(new PropertyValueFactory<Property, Integer>("price"));
+        districtCol.setCellValueFactory(new PropertyValueFactory<Property, String>("district"));
+        typeCol.setCellValueFactory(new PropertyValueFactory<Property, String>("type"));
+        table.setItems(list);
+    }
 }

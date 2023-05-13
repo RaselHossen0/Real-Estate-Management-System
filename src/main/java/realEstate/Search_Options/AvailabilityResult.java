@@ -4,9 +4,11 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 import realEstate.Main_Classes.Property;
 import realEstate.Main_Classes.PropertyManager;
 import realEstate.Scene_Change;
@@ -45,88 +47,6 @@ public class AvailabilityResult extends Scene_Change implements Initializable {
     Stage stage;
     Scene scene;
 
-
-    @FXML
-    void addCustomer(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("AddCustomer.fxml"));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
-
-    @FXML
-    void backtoDash(ActionEvent event) throws IOException {
-        FXMLLoader loader=new FXMLLoader(getClass().getResource("DashBoard.fxml"));
-        Parent root = loader.load();
-        DashBoard ds=loader.getController();
-        PropertyManager.retrieve();
-        Integer totProp= PropertyManager.getTotalProperties();
-        ds.listeddPropLabel.setText(String.valueOf(totProp));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
-
-
-    @FXML
-    void byType(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("byType.fxml"));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
-
-
-    @FXML
-    void addProperty(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("AddProperty.fxml"));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
-
-    @FXML
-    void byArea(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("inArea.fxml"));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
-
-
-
-    @FXML
-    void loanCalc(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("loanCalc.fxml"));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
-
-    @FXML
-    void removeProperty(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("removeProp.fxml"));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-
-    }
-
-    @FXML
-    void editProperty(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("editProperty.fxml"));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
 
     void searchAvailability(){
         try {

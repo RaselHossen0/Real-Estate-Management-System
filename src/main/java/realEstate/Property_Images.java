@@ -31,7 +31,9 @@ public class Property_Images extends Scene_Change  {
         int nextIndex = (currentIndex + 1) % imagePaths.size();
 
         // Load and set the next image
-        String nextImagePath = imagePaths.get(nextIndex);
+        String nextImagePath="@..";
+        nextImagePath += imagePaths.get(nextIndex);
+
         Image nextImage = new Image(nextImagePath);
         property_image.setImage(nextImage);
 

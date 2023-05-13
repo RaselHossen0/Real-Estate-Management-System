@@ -47,11 +47,7 @@ public class InArea implements Initializable {
         stage.show();
     }
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        locationBox.getItems().addAll("Dhanmondi", "Gulshan", "Uttara", "Motijheel", "Chawkbazar", "Old Dhaka", "Shahbagh", "Mohammadpur", "Mirpur", "Banani", "Baridhara", "Bashundhara", "Nikunja", "Khilgaon", "Panthapath", "Farmgate", "Malibagh", "New Eskaton", "Siddheswari", "Jatrabari", "Wari", "Gendaria", "Mugda", "Kamrangirchar", "Keraniganj", "Demra", "Kadamtali", "Sabujbagh", "Shyampur", "Badda", "Tejgaon", "Basabo", "Basundhara Residential Area", "Shantinagar", "Hazaribagh", "Lalbagh", "Sutrapur", "Ramna", "Palton", "Dakhshinkhan", "Bimanbandar", "Khilkhet", "Nakhalpara", "Mirpur DOHS", "Rampura", "Merul Badda", "Dhaka Cantonment", "Banglamotor", "Gulistan", "Armanitola", "Postogola", "Chak Bazar", "Banga Bazar", "Shampur", "Kalyanpur", "Uttar Khan", "Azimpur", "Nawabganj", "Tongi", "Kafrul", "Mohakhali", "Bijoynagar", "Gandaria Thana", "Hajipara", "Jatrabari Thana", "Sayedabad", "Sukrabad", "Turag", "Wari Thana");
-        districtBox.getItems().addAll("Dhaka", "Barishal", "Rajshahi", "Sylhet", "Mymenshinh", "Chattogram", "Rajbari");
-    }
+
 
     @FXML
     void addProperty(ActionEvent event) throws IOException {

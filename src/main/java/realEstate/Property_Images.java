@@ -46,7 +46,7 @@ public class Property_Images extends Scene_Change  {
      //   property_image.setImage(nextImage);
         Property currentProperty = propertyList.get(index);
         Customer customer=currentProperty.getCustomer();
-        System.out.println(currentProperty.getPropertyID());
+      //  System.out.println(currentProperty.getPropertyID());
 
 //        if(currentProperty!=null) {
            price.setText("Price: " + currentProperty.getPrice()+" Lakh ");

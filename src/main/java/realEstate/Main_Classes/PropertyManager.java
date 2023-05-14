@@ -210,7 +210,7 @@ public class PropertyManager {
         Customer.get_all_customers();
         int index=0;
         for(Property property:properties){
-            Customer customer;
+            Customer customer=new Customer();
             customer=Customer.customer_by_id(property.getPropertyID());
             if(customer==null){
                 customer.setDistrict("Not Exist");
@@ -219,8 +219,8 @@ public class PropertyManager {
                 customer.setType("Not Exist");
                 customer.setLocation("not Exist");
             }
-            properties.get(index).setCustomer(customer);
-          //  System.out.println(property.getCustomer().getType());
+            property.setCustomer(customer);
+           System.out.println(customer.getType());
             index++;
         }
     }

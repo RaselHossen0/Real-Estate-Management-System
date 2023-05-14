@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="realEstate.Agent_Login.profileControl">
+   <children>
+      <ImageView fitHeight="871.0" fitWidth="1455.0" layoutX="-56.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/rename.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="972.0" layoutY="67.0" mnemonicParsing="false" onAction="#dashOnAction" prefHeight="55.0" prefWidth="199.0" text="Back">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Button>
+      <Text layoutX="412.0" layoutY="399.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact Number:">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Text>
+      <Text layoutX="412.0" layoutY="478.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Text>
+      <Label fx:id="Number" layoutX="574.0" layoutY="377.0" prefHeight="27.0" prefWidth="211.0" text="01774407895">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label fx:id="Mail" layoutX="483.0" layoutY="455.0" prefHeight="31.0" prefWidth="331.0" text="diptomistry50@gmail.com">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label fx:id="Username" alignment="CENTER" layoutX="483.0" layoutY="289.0" prefHeight="31.0" prefWidth="346.0" text="Dipto Mistry" textAlignment="CENTER">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="-36.0" layoutY="318.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@14.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="menuBut" layoutY="390.0" mnemonicParsing="false" onAction="#menuButOnAction" opacity="0.04" prefHeight="26.0" prefWidth="42.0" />
+      <AnchorPane fx:id="menuBar" layoutX="-559.0" layoutY="-1.0" prefHeight="812.0" prefWidth="560.0">
+         <children>
+            <ImageView fitHeight="841.0" fitWidth="454.0" layoutX="103.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@18.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="103.0" fitWidth="82.0" layoutX="498.0" layoutY="353.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@16.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="493.0" layoutY="391.0" mnemonicParsing="false" onAction="#slideButtonOnAction" opacity="0.01" prefHeight="26.0" prefWidth="58.0" />
+            <Button layoutX="218.0" layoutY="243.0" mnemonicParsing="false" onAction="#homeOnAction" prefHeight="77.0" prefWidth="211.0" style="-fx-background-color: #0000;" text="HOME">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Button>
+            <Button layoutX="225.0" layoutY="440.0" mnemonicParsing="false" onAction="#canOnAction" prefHeight="77.0" prefWidth="211.0" style="-fx-background-color: #0000;" text="CANCEL">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -2,21 +2,15 @@ package realEstate;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import realEstate.classes.Property;
-import realEstate.classes.PropertyManager;
+import realEstate.Main_Classes.Property;
+import realEstate.Main_Classes.PropertyManager;
 
-import java.io.IOException;
-import java.util.Objects;
-
-public class EditProperty {
+public class EditProperty extends Scene_Change {
     Stage stage;
     Scene scene;
     @FXML
@@ -61,34 +55,10 @@ public class EditProperty {
     @FXML
     private Label idLabel;
 
-    @FXML
-    void addProperty(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("AddProperty.fxml")));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
 
 
-    @FXML
-    void byArea(ActionEvent event) throws IOException {
 
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("inArea.fxml")));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
 
-    @FXML
-    void byType(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("byType.fxml")));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
 
     @FXML
     void edit(ActionEvent event) {
@@ -100,29 +70,10 @@ public class EditProperty {
         typeFiled.clear();
 
     }
-    @FXML
-    void removeProperty(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("removeProp.fxml")));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
 
-    }
 
-    @FXML
-    void editProperty(ActionEvent event) {
 
-    }
 
-    @FXML
-    void loanCalc(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("loanCalc.fxml")));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
 
    public Property serachbyID(){
         Integer id= Integer.valueOf(searchField.getText());
@@ -155,33 +106,18 @@ public class EditProperty {
     }
     @FXML
     void search(ActionEvent event) {
-        if(serachbyID()==null)
+        if(serachbyID()==null) {
+            errorMessage.setVisible(true);
             errorMessage.setText("No property with this ID!");
+        }
         else {
             serachbyID();
-            errorMessage.setText("");
+            errorMessage.setVisible(false);
+           errorMessage.setText("");
         }
     }
 
-    @FXML
-    void toDash(ActionEvent event) throws IOException {
-        FXMLLoader loader=new FXMLLoader(getClass().getResource("DashBoard.fxml"));
-        Parent root = loader.load();
-        DashBoard ds=loader.getController();
-        Integer totProp= PropertyManager.getTotalProperties();
-        ds.listeddPropLabel.setText(String.valueOf(totProp));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
 
-    @FXML
-    void addCustomer(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("AddCustomer.fxml")));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
+
+
 }

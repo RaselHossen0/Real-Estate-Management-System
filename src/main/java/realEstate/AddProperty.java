@@ -9,16 +9,18 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-import realEstate.classes.Property;
-import realEstate.classes.PropertyManager;
+import realEstate.Main_Classes.Property;
+import realEstate.Main_Classes.PropertyManager;
 
 import java.io.*;
+import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Objects;
 
-public class AddProperty {
+public class AddProperty extends Scene_Change {
     Stage stage;
     Scene scene;
     @FXML
@@ -42,8 +44,6 @@ public class AddProperty {
     @FXML
     private TextField locationField;
 
-    @FXML
-    private TextField pathFild;
 
     @FXML
     private Button postSubmitButton;
@@ -77,6 +77,9 @@ public class AddProperty {
 
     @FXML
     private Button saleSearchButton112;
+    @FXML
+    private Button pathFild;
+    String path;
 
     @FXML
     private RadioButton saleTick;
@@ -88,7 +91,7 @@ public class AddProperty {
     private TextField sizeFild;
     @FXML
     void listed(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("listedProperties.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxml_files/listedProperties.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -116,10 +119,10 @@ public class AddProperty {
 
             try {
                 if (splitString[6].equals("Yes")) {
-                   // type = 1;
+                    // type = 1;
                     //two[1] = type;
                 } else if (splitString[7].equals("Yes")) {
-                   // type = 2;
+                    // type = 2;
                     //two[1] = type;
                 }
             } catch (Exception e) {
@@ -149,9 +152,9 @@ public class AddProperty {
         String type=null;
         String selRent = null;
         if (saleTick.isSelected() && !rentTick.isSelected())
-           selRent = "Sale";
+            selRent = "Sale";
         else if (!saleTick.isSelected() && rentTick.isSelected())
-           selRent = "Rent";
+            selRent = "Rent";
         if (flatTick.isSelected() && !landTick.isSelected())
             type = "Flat";
         else if (!flatTick.isSelected() && landTick.isSelected())
@@ -161,9 +164,9 @@ public class AddProperty {
         String description=desFild.getText();
         String sellerName=sellNamFild.getText();
         String contact=contactFild.getText();
-        String imagePath=pathFild.getText();
+        String imagePath=path;
         writer.write(price+"/"+propertyID+"/"+district+"/"+location+"/"+type+"/"+selRent+"/"+size+"/"
-        +description+"/"+sellerName+"/"+contact+"/"+imagePath+"\n");
+                +description+"/"+sellerName+"/"+contact+"/"+imagePath+"\n");
         writer.close();
     }
     int savingPost() throws IOException {
@@ -196,66 +199,41 @@ public class AddProperty {
 //        if (newProperty.price == null || newProperty.country == null || newProperty.type == null ||
 //                newProperty.availability == null || newProperty.location == null || newProperty.landArea == null
 //        )
-            flag = 0;
-      //  if (flag == 1) {
-            newProperty.writingFile();
-       // }
+        flag = 0;
+        //  if (flag == 1) {
+        newProperty.writingFile();
+        // }
         //properties.addProperty(newProperty);
         return flag;
     }
     @FXML
-    void addProperty(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("AddProperty.fxml")));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
+    void  chooseDirectory() {
+        // Create a file chooser
+        FileChooser fileChooser = new FileChooser();
 
-    @FXML
-    void byArea(ActionEvent event) {
+        // Set the initial directory
+        fileChooser.setInitialDirectory(new File(System.getProperty("user.home")));
+        String file=null;
+        // Show the file chooser dialog
+        File selectedFile = fileChooser.showOpenDialog(stage);
 
-    }
+            System.out.println("Selected file: " + selectedFile.getPath());
 
-    @FXML
-    void byType(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("byType.fxml")));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
+            // Get the path of the directory where the file will be saved
+        try {
+            File targetDirectory = new File("src/main/resources/images/");
 
-    @FXML
-    void editProperty(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("editProperty.fxml")));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
+            // Copy the file to the target directory
+            path = new File(targetDirectory, selectedFile.getName()).getPath();
+                Files.copy(selectedFile.toPath(), new File(targetDirectory, selectedFile.getName()).toPath());
+           // System.out.println(copiedFilePath);
 
-    @FXML
-    void loanCalc(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("loanCalc.fxml")));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
-
-
-    @FXML
-    void removeProperty(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("removeProp.fxml")));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        // If the user selected a file, print its path
 
     }
-
-
 
     void formClear() {
         priceField.clear();
@@ -270,19 +248,5 @@ public class AddProperty {
     }
 
 
-    public void addCustomer(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("AddCustomer.fxml")));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
 
-    public void toAvailabilty(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Availabilty.fxml")));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
 }

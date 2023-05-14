@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="realEstate.Agent_Login.loginControl">
+   <children>
+      <ImageView fitHeight="709.0" fitWidth="1258.0" layoutX="-11.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/login.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="dashboard" layoutX="362.0" layoutY="417.0" mnemonicParsing="false" onAction="#toDash" prefHeight="73.0" prefWidth="448.0" style="-fx-background-color: #0000;" />
+      <Button fx:id="profile" layoutX="362.0" layoutY="271.0" mnemonicParsing="false" onAction="#profileOnAction" prefHeight="73.0" prefWidth="448.0" style="-fx-background-color: #0000;" />
+
+   </children>
+</AnchorPane>

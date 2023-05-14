@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="brandingImage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="realEstate.AgentCreation.signupController">
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="brandingImageView2" fitHeight="739.0" fitWidth="507.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Rafi(2).png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="409.0" fitWidth="323.0" layoutX="-52.0" layoutY="-78.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/1.png" />
+               </image>
+            </ImageView>
+
+
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="700.0" prefWidth="393.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="177.0" fitWidth="204.0" layoutX="29.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/5.png" />
+               </image></ImageView>
+            <ImageView fitHeight="63.0" fitWidth="48.0" layoutX="47.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/6.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="63.0" fitWidth="39.0" layoutX="52.0" layoutY="307.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/4.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="67.0" fitWidth="45.0" layoutX="47.0" layoutY="237.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/6.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="60.0" fitWidth="47.0" layoutX="51.0" layoutY="377.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/3.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="65.0" fitWidth="47.0" layoutX="51.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/7.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="58.0" fitWidth="43.0" layoutX="52.0" layoutY="516.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/2.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="93.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Firstname" />
+            <Text layoutX="93.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lastname" />
+            <Text layoutX="93.0" layoutY="339.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact Number" />
+            <Text layoutX="95.0" layoutY="408.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" />
+            <Text layoutX="95.0" layoutY="478.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
+            <Text layoutX="99.0" layoutY="547.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirm Password" />
+            <TextField fx:id="Firstname" layoutX="209.0" layoutY="187.0" promptText="Firstname" />
+            <TextField fx:id="ContactNumber" layoutX="209.0" layoutY="322.0" promptText="Contact Number" />
+            <TextField fx:id="Lastname" layoutX="209.0" layoutY="254.0" promptText="Lastname" />
+            <TextField fx:id="Email" layoutX="209.0" layoutY="391.0" promptText="Email" />
+            <PasswordField fx:id="Password" layoutX="209.0" layoutY="455.0" promptText="Password" />
+            <PasswordField fx:id="ConfirmPassword" layoutX="209.0" layoutY="529.0" promptText="Confirm Password" />
+            <Label fx:id="msg1" layoutX="55.0" layoutY="593.0" prefHeight="17.0" prefWidth="310.0" />
+            <Button fx:id="CreateAccount" layoutX="56.0" layoutY="627.0" mnemonicParsing="false" onAction="#CreateAccountOnAction" prefHeight="32.0" prefWidth="167.0" text="Register" />
+            <Label fx:id="msg2" layoutX="55.0" layoutY="585.0" prefHeight="17.0" prefWidth="310.0" textFill="#eb0707" />
+            <ImageView fitHeight="730.0" fitWidth="553.0" layoutX="383.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/10.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+   </center>
+</BorderPane>

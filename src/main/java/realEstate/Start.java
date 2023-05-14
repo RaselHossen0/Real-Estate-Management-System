@@ -15,7 +15,6 @@ public class Start extends Application {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(startControl.class.getResource("start.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
-           // scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
             stage.setTitle("Real Estate Management");
             stage.setScene(scene);
             stage.show();

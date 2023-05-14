@@ -143,7 +143,7 @@ public class signupController {
                     // Handle any exceptions that might occur while writing to the file
                     e.printStackTrace();
                 }
-                try (FileWriter fileWriter = new FileWriter("forgetpass.txt", false);
+                try (FileWriter fileWriter = new FileWriter("forgetpass.txt", true);
                      BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)) {
 
                     // Write the data from the text fields and password fields to the file

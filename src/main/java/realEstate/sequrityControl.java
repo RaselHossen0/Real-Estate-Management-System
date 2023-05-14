@@ -97,35 +97,136 @@ public class sequrityControl {
                 }
                 String filename2 = "users.txt";
                 //String email = sqrtMail.getText();
-
-
-
                 StringBuilder fileContent2 = new StringBuilder();
 
                 try (BufferedReader reader = new BufferedReader(new FileReader(filename2))) {
                     String line2;
-                    int lineNumber2 = 1;
                     while ((line2 = reader.readLine()) != null) {
-                        String[] data = line2.split(",");
-                        if (data.length >= 2 && email.equals(data[0])) {
-                            // Email match found
+                        String[] data2 = line2.split(",");
+                        if (data2.length >= 2 && email.equals(data2[0])) {
+                            // Email match found, skip this line
+                            continue;
+                        }
+                        fileContent2.append(line2).append(System.lineSeparator());
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                try (FileWriter fileWriter = new FileWriter(filename2);
+                     BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)) {
+                    bufferedWriter.write(fileContent2.toString());
+                    bufferedWriter.write(sqrtMail.getText() + "," + sqrtPass.getText());
+                    bufferedWriter.newLine();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+
+                            /*
                             try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename2))) {
                                 writer.write(fileContent2.toString());
                             } catch (IOException e) {
                                 e.printStackTrace();
                             }
 
+                             */
+
 
                             // Replace the password with the new password
-                            line2 = email + "," + sqrtPass.getText();
-                        }
-                        fileContent2.append(line2);
-                        fileContent2.append(System.lineSeparator());
-                        lineNumber2++;
-                    }
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+                            ///line2 = email + "," + sqrtPass.getText();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        ///fileContent2.append(line2);
+                        ///fileContent2.append(System.lineSeparator());
+
             } else {
                 answerMsg.setText("Invalid email or security question.");
             }

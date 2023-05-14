@@ -7,6 +7,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import realEstate.Main_Classes.Customer;
 import realEstate.Main_Classes.PropertyManager;
 
 import java.io.IOException;
@@ -91,8 +92,11 @@ public abstract class Scene_Change {
         FXMLLoader loader=new FXMLLoader(getClass().getResource("/fxml_files/DashBoard.fxml"));
         Parent root = loader.load();
         DashBoard ds=loader.getController();
-        Integer totProp= PropertyManager.getTotalProperties();
-        ds.listeddPropLabel.setText(String.valueOf(totProp));
+       ds.totalBuyers.setText(String.valueOf(PropertyManager.get_num_of_buyer()));
+        ds.totalCustomer.setText(String.valueOf(Customer.getCustomers().size()));
+       ds.totalSellers.setText(String.valueOf(PropertyManager.get_num_of_seller()));
+        ds.totalSell.setText(String.valueOf(PropertyManager.get_total_sell())+" Lakh Taka");
+        ds.totalListedProp.setText(String.valueOf(PropertyManager.getTotalProperties()));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

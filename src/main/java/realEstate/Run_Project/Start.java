@@ -7,6 +7,7 @@ import javafx.stage.Stage;
 import realEstate.Main_Classes.PropertyManager;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class Start extends Application {
 
@@ -24,7 +25,7 @@ public class Start extends Application {
         }
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, SQLException {
         PropertyManager.retrieve();
         launch();
     }

@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="700.0" prefWidth="1200.0" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="realEstate.DashBoard">
+<AnchorPane prefHeight="700.0" prefWidth="1200.0" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="realEstate.DashBoard">
     <children>
         <VBox layoutX="-1.0" layoutY="-4.0" prefHeight="706.0" prefWidth="210.0" style="-fx-background-color: #ffff00;" stylesheets="@../style.css">
             <children>
@@ -67,22 +69,34 @@
          <font>
             <Font size="28.0" />
          </font></Label>
-      <Label fx:id="total" layoutX="243.0" layoutY="239.0" prefHeight="107.0" prefWidth="280.0" />
-      <Label layoutX="558.0" layoutY="112.0" prefHeight="107.0" prefWidth="280.0" text="Total Buyers">
+      <Label fx:id="totalSell" layoutX="243.0" layoutY="239.0" prefHeight="107.0" prefWidth="280.0">
+         <font>
+            <Font size="27.0" />
+         </font></Label>
+      <Label layoutX="558.0" layoutY="112.0" prefHeight="107.0" prefWidth="280.0" text=" Total Flats">
          <font>
             <Font size="28.0" />
          </font></Label>
-      <Label layoutX="242.0" layoutY="499.0" prefHeight="107.0" prefWidth="280.0" />
+      <Label fx:id="totalListedProp" layoutX="242.0" layoutY="499.0" prefHeight="107.0" prefWidth="280.0">
+         <font>
+            <Font size="23.0" />
+         </font></Label>
       <Label layoutX="243.0" layoutY="369.0" prefHeight="107.0" prefWidth="280.0" text="Total Listed Properties" wrapText="true">
          <font>
             <Font size="28.0" />
          </font></Label>
-      <Label fx:id="listeddPropLabel" alignment="CENTER" layoutX="871.0" layoutY="239.0" prefHeight="107.0" prefWidth="280.0" />
-      <Label layoutX="871.0" layoutY="112.0" prefHeight="107.0" prefWidth="280.0" text="Total Sellers">
+      <Label fx:id="totalSellers" alignment="CENTER" layoutX="871.0" layoutY="239.0" prefHeight="107.0" prefWidth="280.0">
+         <font>
+            <Font size="39.0" />
+         </font></Label>
+      <Label layoutX="871.0" layoutY="112.0" prefHeight="107.0" prefWidth="280.0" text="Total Lands">
          <font>
             <Font size="28.0" />
          </font></Label>
-      <Label layoutX="558.0" layoutY="239.0" prefHeight="107.0" prefWidth="280.0" />
+      <Label fx:id="totalBuyers" layoutX="558.0" layoutY="239.0" prefHeight="107.0" prefWidth="280.0">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
       <VBox layoutX="-3.0" layoutY="-4.0" prefHeight="94.0" prefWidth="1207.0" style="-fx-background-color: #996699;">
          <children>
             <Label alignment="CENTER" blendMode="GREEN" nodeOrientation="LEFT_TO_RIGHT" prefHeight="68.0" prefWidth="864.0" style="-fx-background-color: #996699;" text="Dashboard" textFill="#16f9f5">
@@ -100,8 +114,14 @@
             <Font size="28.0" />
          </font>
       </Label>
-      <Label layoutX="871.0" layoutY="369.0" prefHeight="107.0" prefWidth="280.0" />
-      <Label layoutX="871.0" layoutY="499.0" prefHeight="107.0" prefWidth="280.0" />
+      <Label layoutX="871.0" layoutY="369.0" prefHeight="107.0" prefWidth="280.0" text="Total Customers">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Label fx:id="totalCustomer" layoutX="871.0" layoutY="499.0" prefHeight="107.0" prefWidth="280.0">
+         <font>
+            <Font size="30.0" />
+         </font></Label>
       <Button fx:id="btn" layoutX="558.0" layoutY="499.0" mnemonicParsing="false" onAction="#view_images" prefHeight="107.0" prefWidth="280.0" style="-fx-background-color: #ff9966; -fx-text-fill: #bb2234;" text="View " textFill="#f20000" />
 
     </children>

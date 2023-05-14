@@ -50,7 +50,7 @@ public class AvailabilityResult extends Scene_Change implements Initializable {
 
     void searchAvailability(){
         try {
-            BufferedReader reader = new BufferedReader(new FileReader("/fxml_files/Availability.txt"));
+            BufferedReader reader = new BufferedReader(new FileReader("Availability.txt"));
             String whole = reader.readLine();
             List<Property> list1;
             PropertyManager.retrieve();

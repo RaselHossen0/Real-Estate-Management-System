@@ -1,6 +1,6 @@
 package realEstate.Main_Classes;
 
-public class Flat extends Property implements Image {
+public class Flat extends Property  {
     Integer room;
     Integer bath;
     String amenities;
@@ -62,17 +62,7 @@ public class Flat extends Property implements Image {
         super(district, location, country, type, sellRent, propertyID, landArea, status);
     }
 
-    public void addImage() {
 
-    }
-
-    public void editImage() {
-
-    }
-
-    public void removeImage() {
-
-    }
     public Integer getSl() {
         return sl;
     }

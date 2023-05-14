@@ -117,8 +117,13 @@ public class Property {
     }
 
 
+    public Customer getCustomer() {
+        return customer;
+    }
 
-
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
 
     public  void writingFile() throws IOException {
         BufferedWriter writer = new BufferedWriter(new FileWriter("addProperty.txt", true));

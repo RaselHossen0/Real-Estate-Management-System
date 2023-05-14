@@ -1,6 +1,6 @@
 package realEstate.Main_Classes;
 
-public class Land extends Property implements Image {
+public class Land extends Property  {
     String shape;
     String zoning;
     String natural_feature;
@@ -50,15 +50,4 @@ public class Land extends Property implements Image {
 
     }
 
-    public void addImage() {
-
-    }
-
-    public void editImage() {
-
-    }
-
-    public void removeImage() {
-
-    }
 }

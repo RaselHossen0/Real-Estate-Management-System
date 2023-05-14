@@ -8,33 +8,16 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
-import realEstate.DashBoard;
-import realEstate.Main_Classes.PropertyManager;
+import realEstate.Scene_Change;
 
 import java.io.IOException;
 
-public class loginControl {
+public class loginControl extends Scene_Change {
     @FXML
     private Button dashboard;
     Stage stage;
     Scene scene;
-    @FXML
-    void dashboardOnAction(ActionEvent event) throws IOException {
-        try{
-            //dashboard.setStyle("-fx-background-color: green; -fx-text-fill: white;");
-            FXMLLoader loader=new FXMLLoader(getClass().getResource("/fxml_files/DashBoard.fxml"));
-            Parent root = loader.load();
-            DashBoard ds=loader.getController();
-            Integer totProp= PropertyManager.getTotalProperties();
-            ds.listeddPropLabel.setText(String.valueOf(totProp));
-            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();}
-        catch (Exception e){
-            System.out.println(e);
-        }
-    }
+
     @FXML
     void profileOnAction(ActionEvent event) throws IOException {
         try{

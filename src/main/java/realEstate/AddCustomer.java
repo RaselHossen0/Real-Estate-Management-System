@@ -74,6 +74,7 @@ public class AddCustomer extends Scene_Change implements Initializable {
 
 
 
+
     @FXML
     void add(ActionEvent event) {
         setDataTOtable();

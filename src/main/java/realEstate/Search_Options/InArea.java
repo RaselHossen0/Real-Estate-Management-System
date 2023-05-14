@@ -10,8 +10,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.stage.Stage;
-import realEstate.DashBoard;
-import realEstate.Main_Classes.PropertyManager;
 import realEstate.Scene_Change;
 
 import java.io.BufferedWriter;
@@ -36,18 +34,7 @@ public class InArea extends Scene_Change implements Initializable {
     ChoiceBox<String> districtBox;
 
 
-    @FXML
-    void backtoDash(ActionEvent event) throws IOException {
-        FXMLLoader loader=new FXMLLoader(getClass().getResource("/fxml_files/DashBoard.fxml"));
-        Parent root = loader.load();
-        DashBoard ds=loader.getController();
-        Integer totProp= PropertyManager.getTotalProperties();
-        ds.listeddPropLabel.setText(String.valueOf(totProp));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         locationBox.getItems().addAll("Dhanmondi", "Gulshan", "Uttara", "Motijheel", "Chawkbazar", "Old Dhaka", "Shahbagh", "Mohammadpur", "Mirpur", "Banani", "Baridhara", "Bashundhara", "Nikunja", "Khilgaon", "Panthapath", "Farmgate", "Malibagh", "New Eskaton", "Siddheswari", "Jatrabari", "Wari", "Gendaria", "Mugda", "Kamrangirchar", "Keraniganj", "Demra", "Kadamtali", "Sabujbagh", "Shyampur", "Badda", "Tejgaon", "Basabo", "Basundhara Residential Area", "Shantinagar", "Hazaribagh", "Lalbagh", "Sutrapur", "Ramna", "Palton", "Dakhshinkhan", "Bimanbandar", "Khilkhet", "Nakhalpara", "Mirpur DOHS", "Rampura", "Merul Badda", "Dhaka Cantonment", "Banglamotor", "Gulistan", "Armanitola", "Postogola", "Chak Bazar", "Banga Bazar", "Shampur", "Kalyanpur", "Uttar Khan", "Azimpur", "Nawabganj", "Tongi", "Kafrul", "Mohakhali", "Bijoynagar", "Gandaria Thana", "Hajipara", "Jatrabari Thana", "Sayedabad", "Sukrabad", "Turag", "Wari Thana");
@@ -55,14 +42,7 @@ public class InArea extends Scene_Change implements Initializable {
     }
 
 
-    @FXML
-    void addProperty(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("AddProperty.fxml"));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
+
 
     void boxValue() throws IOException {
         BufferedWriter writer=new BufferedWriter(new FileWriter("inArea.txt"));

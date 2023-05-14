@@ -1,6 +1,7 @@
 package realEstate.Main_Classes;
 
 import java.io.*;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -129,7 +130,8 @@ public class PropertyManager {
         }
         return ansList;
     }
-    public static void retrieve() throws IOException {
+    public static void retrieve() throws IOException, SQLException {
+
         BufferedReader reader=new BufferedReader(new FileReader("addProperty.txt"));
         String whole;
         int cnt=0;
@@ -167,6 +169,7 @@ public class PropertyManager {
                 newFlat.setContact(contact);
                  newFlat.setImagePath(imagePath);
                  properties.add(newFlat);
+
                  flats.add(newFlat);
             }
             else{
@@ -193,6 +196,7 @@ public class PropertyManager {
             cnt++;
         }
         totalProperties=cnt;
+        customer_set();
         reader.close();
     }
     public static List<String> getImagePaths() {
@@ -201,5 +205,50 @@ public class PropertyManager {
             imagePaths.add(property.getImagePath());
         }
         return imagePaths;
+    }
+    static void customer_set() throws SQLException {
+        Customer.get_all_customers();
+        int index=0;
+        for(Property property:properties){
+            Customer customer;
+            customer=Customer.customer_by_id(property.getPropertyID());
+            if(customer==null){
+                customer.setDistrict("Not Exist");
+                customer.setName("Not Exist");
+                customer.setMobile(-1);
+                customer.setType("Not Exist");
+                customer.setLocation("not Exist");
+            }
+            properties.get(index).setCustomer(customer);
+          //  System.out.println(property.getCustomer().getType());
+            index++;
+        }
+    }
+    public static int get_num_of_seller() {
+        int cnt=0;
+
+        for (Property property : properties) {
+            if(property.getType().equals("Land"))
+              cnt++;
+        }
+        return cnt;
+    }
+    public static int get_num_of_buyer() {
+        int cnt=0;
+
+        for (Property property : properties) {
+            if(property.getType().equals("Flat"))
+                cnt++;
+        }
+        return cnt;
+    }
+    public static double get_total_sell() {
+        double cnt=0;
+
+        for (Property property : properties) {
+
+                cnt+=property.getPrice();
+        }
+        return cnt;
     }
 }

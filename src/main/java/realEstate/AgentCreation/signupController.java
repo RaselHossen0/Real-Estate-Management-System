@@ -12,9 +12,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 
 
 public class signupController {
@@ -45,7 +43,7 @@ public class signupController {
     private boolean accountCreated = false;
     Stage stage;
     Scene scene;
-    /*
+
     public void initialize() {
         try {
             // Read data from file

@@ -1,10 +1,11 @@
 # Real Estate Management System
+#Contributors
 <h4>Dipto Mistry</h4>
 <h4>Rasel Hossen</h4>
 <h4>Mushiur Mukul</h4>
-# Project Name
 
-**Project Description**: This project is a JavaFX application that utilizes MySQL as its database. It aims to provide [briefly explain the purpose or functionality of your application].
+
+**Project Description**: This project aimed to reduce the hascle of daily work of a real estate agent i. e. broker.The project have feature to include/add property,update property listing,view property and calculate monthly loan.
 
 ## Prerequisites
 

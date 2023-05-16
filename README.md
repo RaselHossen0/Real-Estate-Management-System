@@ -1,4 +1,4 @@
 # Real Estate Management System
-<h1>Dipto Mistry</h1>
-<h1>Rasel Hossen</h1>
-<h1>Mushiur Mukul</h1>
+<h4>Dipto Mistry</h4>
+<h4>Rasel Hossen</h4>
+<h4>Mushiur Mukul</h4>

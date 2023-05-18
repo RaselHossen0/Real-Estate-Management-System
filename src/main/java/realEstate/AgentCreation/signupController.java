@@ -1,4 +1,4 @@
-package realEstate;
+package realEstate.AgentCreation;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -52,7 +52,7 @@ public class signupController {
             // handle second click
 
             try{
-                FXMLLoader loader=new FXMLLoader(getClass().getResource("login.fxml"));
+                FXMLLoader loader=new FXMLLoader(getClass().getResource("/fxml_files/login.fxml"));
                 Parent root = loader.load();
 
                 stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

@@ -220,7 +220,7 @@ public class PropertyManager {
                 customer.setLocation("not Exist");
             }
             property.setCustomer(customer);
-           System.out.println(customer.getType());
+          // System.out.println(customer.getType());
             index++;
         }
     }

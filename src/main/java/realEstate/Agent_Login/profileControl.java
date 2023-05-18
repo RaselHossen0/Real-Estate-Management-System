@@ -1,4 +1,4 @@
-package realEstate;
+package realEstate.Agent_Login;
 
 import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
@@ -147,7 +147,7 @@ public class profileControl {
     private void homeOnAction(){
 
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("start.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml_files/start.fxml"));
             Parent root = loader.load();
 
             // Get the current stage
@@ -184,7 +184,7 @@ public class profileControl {
     void dashOnAction(ActionEvent event) throws IOException {
         try{
 
-            FXMLLoader loader=new FXMLLoader(getClass().getResource("login.fxml"));
+            FXMLLoader loader=new FXMLLoader(getClass().getResource("/fxml_files/login.fxml"));
             Parent root = loader.load();
 
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

@@ -56,12 +56,12 @@
                   <Image url="@../images/3.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="65.0" fitWidth="47.0" layoutX="51.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="65.0" fitWidth="47.0" layoutX="51.0" layoutY="505.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/7.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="58.0" fitWidth="43.0" layoutX="52.0" layoutY="516.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="43.0" layoutX="52.0" layoutY="578.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/2.png" />
                </image>
@@ -70,22 +70,29 @@
             <Text layoutX="93.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lastname" />
             <Text layoutX="93.0" layoutY="339.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact Number" />
             <Text layoutX="95.0" layoutY="408.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" />
-            <Text layoutX="95.0" layoutY="478.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
-            <Text layoutX="99.0" layoutY="547.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirm Password" />
+            <Text layoutX="95.0" layoutY="540.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
+            <Text layoutX="99.0" layoutY="609.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirm Password" />
             <TextField fx:id="Firstname" layoutX="209.0" layoutY="187.0" promptText="Firstname" />
             <TextField fx:id="ContactNumber" layoutX="209.0" layoutY="322.0" promptText="Contact Number" />
             <TextField fx:id="Lastname" layoutX="209.0" layoutY="254.0" promptText="Lastname" />
             <TextField fx:id="Email" layoutX="209.0" layoutY="391.0" promptText="Email" />
-            <PasswordField fx:id="Password" layoutX="209.0" layoutY="455.0" promptText="Password" />
-            <PasswordField fx:id="ConfirmPassword" layoutX="209.0" layoutY="529.0" promptText="Confirm Password" />
-            <Label fx:id="msg1" layoutX="55.0" layoutY="593.0" prefHeight="17.0" prefWidth="310.0" />
-            <Button fx:id="CreateAccount" layoutX="56.0" layoutY="627.0" mnemonicParsing="false" onAction="#CreateAccountOnAction" prefHeight="32.0" prefWidth="167.0" text="Register" />
-            <Label fx:id="msg2" layoutX="55.0" layoutY="585.0" prefHeight="17.0" prefWidth="310.0" textFill="#eb0707" />
+            <PasswordField fx:id="Password" layoutX="209.0" layoutY="517.0" promptText="Password" />
+            <PasswordField fx:id="ConfirmPassword" layoutX="209.0" layoutY="591.0" promptText="Confirm Password" />
+            <Label fx:id="msg1" layoutX="54.0" layoutY="645.0" prefHeight="17.0" prefWidth="310.0" textFill="#4b9435" />
+            <Button fx:id="CreateAccount" layoutX="56.0" layoutY="689.0" mnemonicParsing="false" onAction="#CreateAccountOnAction" prefHeight="32.0" prefWidth="167.0" text="Done" />
+            <Label fx:id="msg2" layoutX="55.0" layoutY="645.0" prefHeight="17.0" prefWidth="310.0" textFill="#eb0707" />
             <ImageView fitHeight="730.0" fitWidth="553.0" layoutX="383.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/10.png" />
                </image>
             </ImageView>
+            <ImageView fitHeight="52.0" fitWidth="97.0" layoutX="26.0" layoutY="439.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/12.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="95.0" layoutY="470.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Security Question" />
+            <TextField fx:id="securityQ" layoutX="209.0" layoutY="452.0" promptText="Who is your Ideal person?" />
          </children></AnchorPane>
    </center>
 </BorderPane>

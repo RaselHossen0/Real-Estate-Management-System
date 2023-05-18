@@ -1,0 +1,4 @@
+dd@gmail.com,mask
+ddd@gmail.com,nai
+email,a
+a,rasel

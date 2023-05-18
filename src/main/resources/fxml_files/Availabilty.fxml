@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.*?>
+<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.Group?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.Font?>
-<AnchorPane prefHeight="700.0" prefWidth="1200.0" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="realEstate.Search_Options.Availability">
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1200.0" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="realEstate.Search_Options.Availability">
     <children>
       <VBox layoutY="14.0" prefHeight="686.0" prefWidth="210.0" style="-fx-background-color: #ffff66;">
          <children>
@@ -77,12 +77,11 @@
         <ChoiceBox fx:id="availabiltyBox" layoutX="619.0" layoutY="231.0" prefHeight="38.0" prefWidth="193.0" />
         <Button fx:id="searchButton" layoutX="533.0" layoutY="312.0" mnemonicParsing="false" onAction="#search" prefHeight="34.0" prefWidth="125.0" text="Search" textAlignment="CENTER" wrapText="true" />
         <Label alignment="CENTER" layoutX="419.0" layoutY="131.0" prefHeight="38.0" prefWidth="400.0" style="-fx-background-color: #99cccc;" text="Properties For Rent" />
-      <Button fx:id="backButton" layoutX="853.0" layoutY="548.0" mnemonicParsing="false" onAction="#backtoDash" prefHeight="37.0" prefWidth="113.0" text="Back" />
         <ImageView fitHeight="55.0" fitWidth="56.0" layoutX="950.0" layoutY="596.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../images/home.png" />
             </image>
         </ImageView>
-        <Button  layoutX="1016.0" layoutY="599.0" mnemonicParsing="false" onAction="#toDash" prefHeight="49.0" prefWidth="151.0" style="-fx-background-color: #ff0033;" text="Dashboard" />
+        <Button layoutX="1016.0" layoutY="599.0" mnemonicParsing="false" onAction="#toDash" prefHeight="49.0" prefWidth="151.0" style="-fx-background-color: #ff0033;" text="Dashboard" />
     </children>
 </AnchorPane>

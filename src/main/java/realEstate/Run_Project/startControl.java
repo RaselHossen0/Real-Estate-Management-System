@@ -1,4 +1,4 @@
-package realEstate;
+package realEstate.Run_Project;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -34,7 +34,7 @@ public class startControl {
     @FXML
     private void forgetPassOnAction(ActionEvent event) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("forgetPass.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml_files/forgetPass.fxml"));
             Parent root = fxmlLoader.load();
             Stage stage = new Stage();
             stage.setTitle("SECURITY");
@@ -105,7 +105,7 @@ public class startControl {
                 e.printStackTrace();
             }
             try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("login.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml_files/login.fxml"));
                 Parent root = loader.load();
                 Stage stage = new Stage();
                 stage.setScene(new Scene(root));
@@ -159,7 +159,7 @@ public class startControl {
     @FXML
     void signup(ActionEvent event) throws IOException {
         try{
-            FXMLLoader loader=new FXMLLoader(getClass().getResource("signupnow.fxml"));
+            FXMLLoader loader=new FXMLLoader(getClass().getResource("/fxml_files/signupnow.fxml"));
             Parent root = loader.load();
 
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

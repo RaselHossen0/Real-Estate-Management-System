@@ -14,7 +14,7 @@ public class Start extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(startControl.class.getResource("/fxml_files/start.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml_files/start.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
            // scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
             stage.setTitle("Real Estate Management");
